@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 125vh;
+    width: 100%;
+    position: relative;
+    background: #EADEDE;
+    color: #131313;
+    font-family: 'Inter', sans-serif;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 30px;
+    text-align: center;
+}
+
+img{
+    width: 200px;
+    margin:10px auto;
+	display:block;
+}
+
+input {
+    transition: 0.5s ease-in-out;
+    margin: 10px 0;
+    font-size: 18px;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: .5rem;
+    border: none;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+    margin: 35px 0;
+}
+
+button {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    font-size: 18px;
+    transition: 0.5s ease-in-out;
+    border-radius: .5rem;
+    border: none;
+}
+  label {
+    font-size: 12px;
+}
+  form {
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    max-width: 370px;
+    margin: 5px auto;
+}
+
+form button {
+    background: #1F1D36;
+    width: 100%;
+    margin: 5px 0;
+    color: white;
+}
+  .start {
+    background: #3F3351;
+    color: white;
+}
+  .break {
+    background: rgb(0, 199, 116);
+    color: #000000;
+}
+  .reset {
+    background: #864879;
+    color: #000000;
+}
+  .pause {
+    background: #E9A6A6;
+  }
+  .resume {
+    background: #2A2550;
+    color: white;
+}
+  .clock {
+    padding: 3px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    height: 30%;
+    font-size: 24px;
+}
+
+  .progress-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  
+  .progress-ring__circle {
+    transition: 0.5s;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    stroke: #3A3845;
+}
+  
+.footer{
+  background-color: #F0ECE3;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1rem 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer p{
+  color: var(--main-color);
+  text-align: center;
+  font-weight: 900;
+  font-size: 15px;
+}
+
+/* Donate link */
+.donate-link{
+  position: relative;
+  justify-content: center;
+  align-items: center;
+
+}
+.donate-link h4{
+  color: var(--main-color);
+}
+.buymeacoffee{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  align-items: center;
+  justify-content: center;
+}
+.donate-link img{
+  width: 8rem;
+  height: 3rem;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 4rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 30px;    
+}
+.donate-link img:hover{
+  
+  transform: scale(1.05);
+  transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+.danger {
+    stroke: rgb(243, 17, 28);
+    animation: pulse 0.9s ease-in-out infinite;
+  }
+  
+  @keyframes pulse {
+    0%,
+    100% {
+      transform: rotate(-90deg) scale(1);
+    }
+    50% {
+      transform: rotate(-90deg) scale(1.05);
+    }
+    75% {
+      transform: rotate(-90deg) scale(0.8);
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    body {
+      display: grid;
+      grid-template-areas:
+        "head head"
+        "clock form"
+        "btns ji";
+    }
+    .btn-group {
+      grid-area: btns;
+      justify-content: center;
+    }
+    .clock {
+      grid-area: clock;
+      height: 100%;
+    }
+    h1 {
+      grid-area: head;
+  
+      align-self: center;
+    }
+    form {
+      align-self: center;
+      justify-self: center;
+      grid-area: form;
+      width: 50%;
+      justify-content: space-around;
+    }
+  }
+  
+  @media screen and (max-width: 375px) {
+    form {
+      height: 40%;
+    }
+  }

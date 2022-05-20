@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studify | Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Visual -->
+    <img src="./desing/logo.png" alt="studifyLogo">
+    <h1>Pomodoro Timer ⌚</h1>
+
+    <figure class="clock">
+        <div class="mins">0</div>
+        <div>:</div>
+        <div class="secs">00</div>
+
+        <audio src="./Timer bell.mp3">
+        </audio>
+
+        <svg class="progress-ring" height="120" width="120">
+            <circle
+              class="progress-ring__circle"
+              stroke-width="8"
+              fill="transparent"
+              r="50"
+              cx="60"
+              cy="60"
+            />
+          </svg>
+    </figure>
+
+    <div class="btn-group">
+        <button class="start">start focus</button>
+        <button class="reset">reset</button>
+        <button class="pause">pause</button>
+    </div>
+
+    <form action=".">
+        <label for="focusTime">Focus Time</label>
+        <input type="number" value="1" id="focusTime" />
+        <label for="breakTime">Break Time</label>
+        <input type="number" value="1" id="breakTime" />
+        <button type="submit">Save settings</button>
+    </form>
+
+    <section class="footer container" id="footer">
+        <div class="social">
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="mailto:develop.maxsj@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+            <a href="https://github.com/devnotmax"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/not_moreno/"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="donate-link">
+            <h4>¡Invitame un café si gustas apoyar para mi educación! :)</h4>
+            <div class="buymeacoffee">
+                <a href="https://www.buymeacoffee.com/developmax" target="_new">
+                    <img src="./img/buymeacoffee1.png" alt="buymeacoffee">
+                </a>
+                <a href="https://cafecito.app/devnotmax" target="_new">
+                    <img src="./img/cafecito.png" alt="buymeacoffee">
+                </a>
+            </div>
+        </div>
+        <p>@Devnotmax</p>
+    </section>
+
+    
+      
+
+    <script src="settings.js"></script>
+    <script src="progress.js"></script>
+    <script src="timer.js"></script>
+</body>
+</html>
