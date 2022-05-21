@@ -123,9 +123,9 @@ form button {
 }
   
 .footer{
-  background-color: #F0ECE3;
   width: 100%;
   position: absolute;
+  top: 1000px;
   bottom: 0;
   left: 0;
   padding: 1rem 8%;
@@ -173,6 +173,27 @@ form button {
   
   transform: scale(1.05);
   transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.social{
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  padding: 20px;
+}
+.social i{
+  font-size: 1.3rem;
+  padding: 10px;
+  border-radius: 50%;
+  color: #000000;
+  background-color: #DFD3C3;
+}
+.social i:hover{
+  background: var(--main-color);
+  transition: 0.3s all linear;
+}
+.social a{
+  text-decoration: none;
 }
 
 
