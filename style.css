@@ -10,6 +10,7 @@
 
 body {
     min-height: 125vh;
+    max-height: 125vh;
     width: 100%;
     position: relative;
     background: #EADEDE;
@@ -35,7 +36,7 @@ input {
     transition: 0.5s ease-in-out;
     margin: 10px 0;
     font-size: 18px;
-    padding: 5px;
+    padding: 10px;
     background: rgba(0, 0, 0, 0.15);
     border-radius: .5rem;
     border: none;
@@ -47,6 +48,7 @@ input {
     align-items: center;
     height: 10%;
     margin: 35px 0;
+    padding: 10px;
 }
 
 button {
@@ -65,9 +67,12 @@ button {
     height: 20%;
     display: flex;
     flex-direction: column;
-    padding: 0;
+    padding: 20px;
     max-width: 370px;
     margin: 5px auto;
+    background-color: #DFD3C3;
+    border-radius: 2rem;
+    border: none;
 }
 
 form button {
